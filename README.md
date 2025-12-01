@@ -66,6 +66,19 @@ JOIN res_partner rp ON am.partner_id = rp.id WHERE am.move_type = 'out_invoice'
 
 <img width="1023" height="722" alt="7" src="https://github.com/user-attachments/assets/4062dc7a-3d13-4697-b430-e6fc88e2491f" />
 
+## Apartado 7: Crea una sentencia que actualice el correo de los contactos cuyo dominio es @bilbao.example.com a @bilbao.bizkaia.neus:
+
+```bash
+UPDATE res_partner SET email = REPLACE(email, '@bilbao.example.com', '@bilbao.bizkaia.neus') WHERE email LIKE '%@bilbao.example.com';
+```
+<img width="1023" height="722" alt="8" src="https://github.com/user-attachments/assets/5f001b6e-2ade-4316-94f2-1c752d69988e" />
+
+```bash
+SELECT name, email FROM res_partner WHERE email LIKE '%@bilbao.bizkaia.neus';
+```
+
+<img width="1023" height="722" alt="9" src="https://github.com/user-attachments/assets/b3190c50-6dab-433b-809e-58c91340f712" />
+
 
 
 
