@@ -44,5 +44,16 @@ IS NOT NULL AND rp.city <> 'Tracy' ORDER BY rpe.name ASC;
 ```
 <img width="855" height="795" alt="5" src="https://github.com/user-attachments/assets/bdfefd21-53be-43c9-bcf6-285b00ba1569" />
 
+## Apartado 5: tilizando las tablas de odoo, obtén un listado de empresas proveedoras, que han emitido algún reembolso (facturas rectificativas de proveedor) - Nombre de la empresa - Número de factura - Fecha de la factura - Total factura SIN impuestos Ordenadas por fecha de factura de modo que la primera sea la más reciente.
+
+``` bash 
+SELECT rp.name AS "Nombre de la Empresa", 
+am.name AS "Número de Factura", am.invoice_date AS "Fecha de la Factura", am.amount_untaxed
+AS "Total SIN Impuestos" FROM account_move am 
+JOIN res_partner rp ON am.partner_id = rp.id WHERE am.move_type = 'in_refund' ORDER BY am.invoice_date DESC;
+```
+
+<img width="1031" height="798" alt="6" src="https://github.com/user-attachments/assets/098861aa-1b64-4139-9d0b-29234e7e4b11" />
+
 
 
