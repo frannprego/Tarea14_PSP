@@ -17,3 +17,11 @@ CREATE TABLE public. "EmpresasFCT" (
 <img width="285" height="261" alt="2" src="https://github.com/user-attachments/assets/672e0574-ed09-4052-8a55-3ab7f52fb126" />
 
 
+## Apartado 2
+Ahora tenemos que inserta 5 registros inventados en la tabla a través de una sentencia SQ. o haremos de la siguiente forma:
+
+```bash
+select * from public."EmpresasFCT"
+```
+
+<img width="629" height="821" alt="3" src="https://github.com/user-attachments/assets/d3d6998f-df09-401c-8b39-c3360cc9066a" />
