@@ -55,5 +55,19 @@ JOIN res_partner rp ON am.partner_id = rp.id WHERE am.move_type = 'in_refund' OR
 
 <img width="1031" height="798" alt="6" src="https://github.com/user-attachments/assets/098861aa-1b64-4139-9d0b-29234e7e4b11" />
 
+## Apartado 6: Utilizando las tablas de odoo, obtén un listado de empresas clientes, a las que se les ha emitido más de dos facturas de venta (solo venta) confirmadas, mostrando los siguientes datos: - Nombre de la empresa - Número de facturas - Total facturado SIN IMPUESTOS.
+
+```bash
+SELECT rp.name AS "Nombre de la Empresa", COUNT(am.id) AS "Número de Facturas", SUM(am.amount_untaxed) 
+AS "Total Facturado SIN IMPUESTOS" FROM account_move am
+JOIN res_partner rp ON am.partner_id = rp.id WHERE am.move_type = 'out_invoice' 
+<zAND am.state = 'posted' GROUP BY rp.name HAVING COUNT(am.id) > 2 ORDER BY rp.name ASC;
+```
+
+<img width="1023" height="722" alt="7" src="https://github.com/user-attachments/assets/4062dc7a-3d13-4697-b430-e6fc88e2491f" />
+
+
+
+
 
 
