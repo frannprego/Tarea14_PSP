@@ -1,4 +1,4 @@
-# Tarea14_PSP
+# Tarea14_SXE
 
 ## Apartado 1: En el primer apartodo nos manda crear las tablas correspondientes a la empresa. Para ellos las crearemos de la siguiente forma: 
 
